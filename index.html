@@ -6,6 +6,7 @@
 <title>Scuola di Storia delle Matematiche</title>
 
 <style>
+
 body {
     font-family: Georgia, "Times New Roman", serif;
     max-width: 900px;
@@ -27,6 +28,10 @@ h2 {
     margin-top: 35px;
 }
 
+h3 {
+    margin-top: 22px;
+}
+
 .sottotitolo {
     font-size: 1.25em;
     font-style: italic;
@@ -34,7 +39,7 @@ h2 {
 
 .info {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 a {
@@ -45,15 +50,79 @@ li {
     margin: 8px 0;
 }
 
-footer {
+
+/* Figure storiche */
+
+.figure-apertura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin: 30px 0 40px 0;
+}
+
+.figure-apertura img {
+    max-width: 46%;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+
+/* Loghi */
+
+.loghi {
     margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #aaa;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.loghi img {
+    max-width: 145px;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+.logo-umi {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #169fd5;
+    padding: 10px;
+}
+
+footer {
+    margin-top: 30px;
     padding-top: 15px;
     border-top: 1px solid #aaa;
     font-size: 0.9em;
 }
+
+
+/* Per telefoni */
+
+@media (max-width: 650px) {
+
+    .figure-apertura {
+        flex-direction: column;
+    }
+
+    .figure-apertura img {
+        max-width: 90%;
+    }
+
+}
+
 </style>
 
 </head>
+
 
 <body>
 
@@ -67,6 +136,17 @@ I edizione — Percorso storico sulla matematica per docenti di scuola: fonti e 
 <b>9–10 ottobre 2026</b><br>
 Dipartimento di Matematica<br>
 Università degli Studi di Roma Tor Vergata
+</div>
+
+
+<div class="figure-apertura">
+
+    <img src="parabola_marc_305_206r(1).png"
+         alt="Figura manoscritta relativa alla Quadratura della parabola">
+
+    <img src="parabola_riccardiano_75v(1).png"
+         alt="Figura manoscritta relativa alla Quadratura della parabola">
+
 </div>
 
 
@@ -90,8 +170,19 @@ e alla lettura delle opere nel loro contesto scientifico.
 <h2>Programma</h2>
 
 <ul>
-<li><a href="programma_Scuola_storia_2026.pdf">Programma completo</a></li>
-<li><a href="locandina.pdf">Locandina</a></li>
+
+<li>
+<a href="programma_Scuola_storia_2026.pdf">
+Programma completo
+</a>
+</li>
+
+<li>
+<a href="locandina.pdf">
+Locandina
+</a>
+</li>
+
 </ul>
 
 
@@ -100,6 +191,7 @@ e alla lettura delle opere nel loro contesto scientifico.
 <h3>Archimede, <i>Quadratura della parabola</i></h3>
 
 <ul>
+
 <li>
 <a href="Heiberg_QP.pdf">
 Testo greco e traduzione latina — edizione Heiberg
@@ -111,6 +203,7 @@ Testo greco e traduzione latina — edizione Heiberg
 Traduzione italiana dei testi utilizzati
 </a>
 </li>
+
 </ul>
 
 
@@ -139,9 +232,35 @@ Scheda 3 — La quadratura: la doppia riduzione all'assurdo
 </ul>
 
 
+<div class="loghi">
+
+    <img src="logo_tor_vergata(1).png"
+         alt="Università degli Studi di Roma Tor Vergata">
+
+    <img src="logo_fi.png"
+         alt="Università degli Studi di Firenze">
+
+    <img src="logo_sism.jpeg"
+         alt="Società Italiana di Storia delle Matematiche">
+
+    <img src="logo_pls(1).png"
+         alt="Piano Lauree Scientifiche">
+
+    <a class="logo-umi"
+       href="Logo UMI 2022.pdf"
+       title="Unione Matematica Italiana">
+       UMI
+    </a>
+
+</div>
+
+
 <footer>
-Scuola di Storia delle Matematiche — Università degli Studi di Roma Tor Vergata
+Scuola di Storia delle Matematiche —
+Università degli Studi di Roma Tor Vergata
 </footer>
 
+</body>
+</html>
 </body>
 </html>
