@@ -7,6 +7,24 @@
 
 <style>
 
+/* =========================
+   PARAMETRI PRINCIPALI
+   ========================= */
+
+:root {
+    --larghezza: 94%;
+    --verde: #185b38;
+    --sfondo: #f3f0e7;
+    --pagina: #fffdf7;
+    --bordo: #d7d0be;
+    --logo-max: 145px;
+}
+
+
+/* =========================
+   BASE
+   ========================= */
+
 html {
     scroll-behavior: smooth;
 }
@@ -15,59 +33,89 @@ body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     color: #222;
-    background: #f3f0e7;
+    background: var(--sfondo);
+    line-height: 1.55;
 }
+
+a {
+    color: var(--verde);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* =========================
+   CONTENITORE GENERALE
+   ========================= */
+
+.container {
+    width: var(--larghezza);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   BARRA SUPERIORE
+   ========================= */
 
 .topbar {
-    background: #fffdf7;
-    border-bottom: 1px solid #d7d0be;
+    width: 100%;
+    background: var(--pagina);
+    border-bottom: 1px solid var(--bordo);
 }
 
-.topbar-inner {
-    width: 96%;
-    margin: 0 auto;
-    padding: 10px 24px;
+.topbar .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 0;
 }
 
 .logo-tv {
-    width: 250px;
+    width: 245px;
     height: auto;
 }
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 26px;
 }
 
 nav a {
     color: #222;
     text-decoration: none;
-    font-size: 1em;
 }
 
 nav a:hover {
-    color: #185b38;
-    text-decoration: underline;
+    color: var(--verde);
 }
 
-.wrapper {
-    width: 96%;
-    margin: 0 auto;
-    background: #fffdf7;
-    box-shadow: 0 0 18px rgba(0,0,0,0.08);
+
+/* =========================
+   PAGINA
+   ========================= */
+
+.page {
+    background: var(--pagina);
+    margin-top: 0;
+    padding-bottom: 35px;
 }
+
+
+/* =========================
+   TESTATA
+   ========================= */
 
 header {
     text-align: center;
-    padding: 36px 35px 18px 35px;
+    padding: 35px 0 20px 0;
 }
 
 h1 {
     margin: 0;
-    color: #185b38;
+    color: var(--verde);
     font-size: 2.8em;
     font-weight: normal;
 }
@@ -80,57 +128,65 @@ h1 {
 
 .info {
     margin-top: 20px;
-    line-height: 1.5;
 }
+
+
+/* =========================
+   IMMAGINI DI APERTURA
+   ========================= */
 
 .figure-apertura {
     display: flex;
+    gap: 22px;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 0 35px 30px 35px;
+    margin: 10px 0 35px 0;
 }
 
 .figure-apertura img {
     width: 48%;
-    max-height: 285px;
-    object-fit: cover;
-    border: 1px solid #c9bfa9;
+    max-height: 300px;
+    object-fit: contain;
     background: white;
+    border: 1px solid var(--bordo);
 }
 
-main {
-    padding: 0 35px 35px 35px;
-}
+
+/* =========================
+   TITOLI E TESTO
+   ========================= */
 
 h2 {
-    color: #185b38;
+    color: var(--verde);
     font-size: 1.8em;
     border-bottom: 1px solid #b9b19f;
-    padding-bottom: 6px;
-    margin-top: 25px;
+    padding-bottom: 5px;
+    margin-top: 32px;
 }
 
 h3 {
     margin-top: 22px;
-    margin-bottom: 8px;
 }
 
 .intro {
     font-size: 1.05em;
-    line-height: 1.65;
 }
+
+
+/* =========================
+   RIQUADRI
+   ========================= */
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1.35fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 22px;
     margin-top: 30px;
 }
 
 .card {
     background: #f8f6ef;
-    border: 1px solid #d7d0be;
+    border: 1px solid var(--bordo);
     border-radius: 6px;
     padding: 22px;
 }
@@ -139,53 +195,74 @@ h3 {
     margin-top: 0;
 }
 
+
+/* =========================
+   LISTE
+   ========================= */
+
 ul {
     padding-left: 22px;
 }
 
 li {
-    margin: 9px 0;
+    margin: 8px 0;
 }
 
-a {
-    color: #185b38;
-}
+
+/* =========================
+   LOGHI
+   ========================= */
 
 .loghi {
-    margin-top: 45px;
-    padding: 25px 20px 20px 20px;
-    border-top: 1px solid #c9c2af;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
     flex-wrap: wrap;
+    margin-top: 45px;
+    padding-top: 25px;
+    border-top: 1px solid var(--bordo);
 }
 
 .loghi img {
-    max-width: 150px;
-    max-height: 65px;
+    max-width: var(--logo-max);
+    max-height: 70px;
     object-fit: contain;
 }
+
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
     text-align: center;
     font-size: 0.9em;
-    padding: 20px;
-    border-top: 1px solid #ddd5c4;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid var(--bordo);
 }
+
+
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 800px) {
 
-    .topbar-inner {
+    :root {
+        --larghezza: 92%;
+    }
+
+    .topbar .container {
         flex-direction: column;
         gap: 10px;
     }
 
     nav {
-        gap: 16px;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
     }
 
     .figure-apertura {
@@ -203,7 +280,6 @@ footer {
     h1 {
         font-size: 2em;
     }
-
 }
 
 </style>
@@ -212,9 +288,14 @@ footer {
 
 <body>
 
+
+<!-- =========================
+     BARRA SUPERIORE
+     ========================= -->
+
 <div class="topbar">
 
-    <div class="topbar-inner">
+    <div class="container">
 
         <img src="logo_tor_vergata.png"
              alt="Università degli Studi di Roma Tor Vergata"
@@ -232,7 +313,14 @@ footer {
 </div>
 
 
-<div class="wrapper">
+<!-- =========================
+     CONTENUTO
+     ========================= -->
+
+<div class="page">
+
+<div class="container">
+
 
 <header>
 
@@ -251,6 +339,10 @@ footer {
 </header>
 
 
+<!-- =========================
+     IMMAGINI
+     ========================= -->
+
 <div class="figure-apertura">
 
     <img src="parabola_marc_305_206r.png"
@@ -262,9 +354,13 @@ footer {
 </div>
 
 
-<main>
+<!-- =========================
+     LA SCUOLA
+     ========================= -->
 
-<h2 id="scuola">La Scuola</h2>
+<section id="scuola">
+
+<h2>La Scuola</h2>
 
 <div class="intro">
 
@@ -284,8 +380,15 @@ e alla lettura delle opere nel loro contesto scientifico.
 
 </div>
 
+</section>
+
+
+<!-- =========================
+     PROGRAMMA + MATERIALI
+     ========================= -->
 
 <div class="cards">
+
 
 <div class="card" id="programma">
 
@@ -359,8 +462,13 @@ Scheda 3 — La quadratura: la doppia riduzione all'assurdo
 
 </div>
 
+
 </div>
 
+
+<!-- =========================
+     LOGHI
+     ========================= -->
 
 <div class="loghi">
 
@@ -381,15 +489,14 @@ Scheda 3 — La quadratura: la doppia riduzione all'assurdo
 
 </div>
 
-</main>
-
 
 <footer>
 Scuola di Storia delle Matematiche — Università degli Studi di Roma Tor Vergata
 </footer>
 
+
+</div>
 </div>
 
 </body>
-
 </html>
